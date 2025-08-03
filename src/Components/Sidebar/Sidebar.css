@@ -1,0 +1,203 @@
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.sidebar {
+    position: fixed;
+    z-index: 1000;
+    width: 320px;
+    height: 100vh;
+    background: white;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.siderbar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.siderbar-header .sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.siderbar-header .sidebar-logo .logo-icon {
+    font-size: 24px;
+}
+
+.siderbar-header .sidebar-logo h2 {
+    color: green;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.siderbar-header .sidebar-close-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.sidebar .sidebar-profile {
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.sidebar .sidebar-profile .profile-avtar {
+    font-size: 48px;
+    width: 80px;
+    height: 80px;
+    background: #7fb069;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+}
+
+.sidebar .sidebar-profile .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.sidebar .sidebar-profile .profile-info h3 {
+    color: #495057;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+}
+
+.sidebar .sidebar-profile .profile-info p {
+    color: #6c757d;
+    font-size: 14px;
+    margin: 0 0 16px 0;
+}
+
+.sidebar .sidebar-profile .profile-info .profile-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar .sidebar-profile .profile-info .profile-details .detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    color: #6c757d;
+}
+
+.sidebar .sidebar-profile .profile-info .profile-details .detail-item .detail-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar .sidebar-profile .profile-info .profile-details .detail-item span {
+    font-size: 15px;
+}
+
+.sidebar .sidebar-nav {
+    padding: 20px 0;
+}
+
+.sidebar .sidebar-nav .nav-section {
+    margin-bottom: 24px;
+}
+
+.sidebar .sidebar-nav .nav-section h4 {
+    color: #6c757d;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin: 0 0 12px 20px;
+}
+
+.sidebar .sidebar-nav .nav-section .nav-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: #3d4348;
+    border-left: 3px solid transparent;
+}
+
+.sidebar .sidebar-nav .nav-section .nav-item:hover {
+    background: #e9ecef;
+    color: #2d5a27;
+}
+
+.sidebar .sidebar-nav .nav-section .nav-item .active {
+    background: rgba(45, 90, 39, 0.1);
+    color: #2d5a27;
+    border-left-color: #2d5a27;
+}
+
+.sidebar .sidebar-nav .nav-section .nav-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.sidebar .sidebar-nav .nav-section .nav-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.sidebar .sidebar-nav .nav-section .nav-label {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.sidebar .sidebar-nav .nav-section .nav-description {
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.sidebar .sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid #e9ecef;
+}
+
+.sidebar .farm-info h4 {
+    color: #495057;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+}
+
+.sidebar .farm-info .farm-details {
+    display: flex;
+    color: #61686f;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sidebar .farm-info .farm-details .farm-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+}

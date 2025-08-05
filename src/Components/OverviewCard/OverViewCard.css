@@ -1,0 +1,38 @@
+.overview-card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+}
+
+.overview-card h3 {
+  color: #6c757d;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.overview-card .card-data {
+  font-size: 28px;
+  font-weight: 700;
+  color: #495057;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* If I remove overview-card, then specificity comes into picture and .card-data color wins */
+.overview-card .expense {
+  color: #dc3545;
+}
+
+.overview-card .revenue {
+  color: #17a2b8;
+}
+
+.overview-card .profit {
+  color: #28a745;
+}

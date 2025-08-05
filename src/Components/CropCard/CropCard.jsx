@@ -1,7 +1,7 @@
 import React from 'react'
 import "./CropCard.css"
 
-const CropCard = ({ crop }) => {
+const CropCard = ({ crop, cropManage}) => {
     return (
         <div className='crop-card'>
             <h3>{crop.name}</h3>

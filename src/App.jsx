@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar/Navbar'
 import Sidebar from './Components/Sidebar/Sidebar'
 import Dashboard from './Pages/User/Dashboard/Dashboard'
 import "./App.css"
+import CropManagement from './Pages/User/CropManagement/CropManagement'
 
 const App = () => {
 
@@ -34,7 +35,8 @@ const App = () => {
       <Navbar />
       {/* <Sidebar/> */}
       <div className="container">
-        <Dashboard data={data} updateData={updateData} selectedYear={selectedYear} />
+        {/* <Dashboard data={data} updateData={updateData} selectedYear={selectedYear} /> */}
+        <CropManagement/>
       </div>
     </div>
   )

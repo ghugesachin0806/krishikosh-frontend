@@ -1,0 +1,19 @@
+.custom-filter {
+    display: flex;
+    align-items: center;
+    background: rgba(141, 134, 134, 0.1);
+    padding: 10px 10px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.custom-filter-select {
+    background: transparent;
+    text-align: center;
+    border: none;
+    color: black;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}

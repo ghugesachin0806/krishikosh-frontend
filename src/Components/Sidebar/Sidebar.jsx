@@ -120,17 +120,17 @@ const Sidebar = () => {
           <div className="farm-info">
             <h4>Farm Information</h4>
             <div className="farm-details">
-              <div class="farm-detail">
-                <span class="detail-label">Total Land:</span>
-                <span class="detail-value">{profile.farmSize}</span>
+              <div className="farm-detail">
+                <span className="detail-label">Total Land:</span>
+                <span className="detail-value">{profile.farmSize}</span>
               </div>
-              <div class="farm-detail">
-                <span class="detail-label">Active Crops:</span>
-                <span class="detail-value">{profile.activeCrop}</span>
+              <div className="farm-detail">
+                <span className="detail-label">Active Crops:</span>
+                <span className="detail-value">{profile.activeCrop}</span>
               </div>
-              <div class="farm-detail">
-                <span class="detail-label">This Year:</span>
-                <span class="detail-value">{profile.currentYear}</span>
+              <div className="farm-detail">
+                <span className="detail-label">This Year:</span>
+                <span className="detail-value">{profile.currentYear}</span>
               </div>
             </div>
           </div>

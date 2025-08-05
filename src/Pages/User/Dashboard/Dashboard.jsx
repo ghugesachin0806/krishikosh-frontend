@@ -1,94 +1,63 @@
 import React from 'react'
 import "./Dashboard.css"
 import { DollarSign, Plus, TrendingDown, TrendingUp } from 'lucide-react';
-import { ResponsiveContainer, PieChart, Pie, Tooltip, Cell, BarChart, CartesianGrid, XAxis, YAxis, Bar } from 'recharts';
+import { ResponsiveContainer, PieChart, Pie,BarChart, Tooltip, Cell, CartesianGrid, XAxis, YAxis, Bar } from 'recharts';
 import {
   totalExpenses,
   totalRevenue,
   netProfit,
-  expenseByCrop,
-  revenueByCrop,
-  crops,
-  COLORS
+  COLORS,
+  cropData,
+  cropFilterList
 } from "../../../DummyData";
 import CropCard from '../../../Components/CropCard/CropCard';
+import Filter from '../../../Components/CustomFilter/CustomFilter';
+import CustomBarChart from '../../../Components/Graphs/CustomBarChart/CustomBarChart';
+import CustomPieChart from '../../../Components/Graphs/PieChart/CustomPieChart';
+import OverViewCard from '../../../Components/OverviewCard/OverViewCard';
 
 const Dashboard = () => {
+
+  const barData = [
+    {
+      dataKey: "totalExpenses",
+      fill: "#dc3545",
+      name: "Expense"
+    },
+    {
+      dataKey: "totalRevenue",
+      fill: "#4a7c59",
+      name: "Revenue"
+    }
+  ]
 
   return (
     <div className='dashboard'>
       {/* Overview cards */}
       <div className="overview-cards">
-        <div className="overview-card">
-          <h3>Total Expenses</h3>
-          <div className="amount expense">
-            <TrendingDown className='icon' />
-            ₹{totalExpenses.toLocaleString()}
-          </div>
-        </div>
-        <div className="overview-card">
-          <h3>Total revenue</h3>
-          <div className="amount revenue">
-            <TrendingUp className='icon' />
-            ₹{totalRevenue.toLocaleString()}
-          </div>
-        </div>
-        <div className="overview-card">
-          <h3>Net Profit</h3>
-          <div className={`amount ${netProfit >= 0 ? 'profit' : 'expense'}`}>
-            <DollarSign className='icon' />
-            ₹{netProfit.toLocaleString()}
-          </div>
-        </div>
+        <OverViewCard cardType='expense' title='Total Expenses' value={totalExpenses} />
+        <OverViewCard cardType='revenue' title='Total revenue' value={totalRevenue}/>
+        <OverViewCard cardType='profit' title='Net Profit' value={netProfit}/>
       </div>
       {/* Charts section */}
       <div className="dashboard-grid">
         <div className="chart-container">
           <h3>Expense Distribution by Crop</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <PieChart>
-              <Pie
-                data={expenseByCrop}
-                cx="50%"
-                cy="50%"
-                labelLine={false}
-                label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
-                outerRadius={80}
-                fill="#8884d8"
-                dataKey="value"
-              >
-                {expenseByCrop.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
-                ))}
-              </Pie>
-              <Tooltip formatter={(value) => `₹${value.toLocaleString()}`} />
-            </PieChart>
-          </ResponsiveContainer>
+          <CustomPieChart cropData={cropData} dataKeyName="totalExpenses" labelName='name' outerRadius={80} width='100%' height={300}  />
         </div>
         <div className="chart-container">
-          <h3>Revenue by Crop</h3>
-          <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={revenueByCrop}>
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis dataKey="name" />
-              <YAxis />
-              <Tooltip formatter={(value) => `₹${value.toLocaleString()}`} />
-              <Bar dataKey="value" fill="#4a7c59" />
-            </BarChart>
-          </ResponsiveContainer>
+          <h3>Expenses & Revenue by Crop</h3>
+          <CustomBarChart cropData={cropData} XAxisName="name" barData={barData} width='100%' height={300}/>
         </div>
       </div>
       {/* Crop management */}
       <div className="crop-management">
         <div className="section-header">
           <h2>Crop Management</h2>
-          <button className='section-btn'>
-            <Plus className='icon'/>
-             <h3>Add New Crop</h3>
-          </button>
+          <Filter list={cropFilterList} />
         </div>
         <div className="crop-list">
-          {crops.map((crop)=>(<CropCard crop={crop}/>))}
+          {cropData.map((crop) => (<CropCard key={crop.id} crop={crop} />))}
         </div>
       </div>
     </div>

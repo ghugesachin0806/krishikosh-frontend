@@ -1,4 +1,4 @@
-.navbar{
+.navbar {
     background: #4a7c59;
     display: flex;
     justify-content: space-between;
@@ -7,12 +7,21 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 11100;
 }
 
-.navbar .nav-left{
+.navbar .nav-left {
     display: flex;
     gap: 50px;
+}
+
+.navbar .nav-left .nav-btn {
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 6px;
 }
 
 .navbar .nav-left .nav-logo h2 {
@@ -29,7 +38,56 @@
     font-weight: 400;
 }
 
-.navbar .nav-right{
+.navbar .nav-right {
     display: flex;
-    gap:40px;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar .nav-right .year-selection {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 18px 18px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+
+.navbar .nav-right .year-selection .calender-icon {
+    width: 25px;
+    height: 25px;
+    color: white;
+    opacity: 0.8;
+}
+
+.navbar .nav-right .year-selection .year-select {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+.navbar .nav-right .profile-container {
+    display: flex;
+    align-items: center;
+    color:  whitesmoke;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.navbar .nav-right .profile-container .profile-avtar {
+    font-size: 45px;
+    width: 60px;
+    height: 60px;
+    background: #7fb069;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

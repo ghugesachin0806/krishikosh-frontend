@@ -1,5 +1,5 @@
 .custom-filter {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     background: rgba(141, 134, 134, 0.1);
     padding: 10px 10px;

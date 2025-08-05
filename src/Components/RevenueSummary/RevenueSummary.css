@@ -1,0 +1,42 @@
+.revenue-summary {}
+
+.revenue-summary .revenue-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.revenue-summary .revenue-card .icon {
+    width: 32px;
+    height: 32px;
+    color: #17a2b8;
+}
+
+.revenue-summary .revenue-card .revenue-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.revenue-summary .revenue-card .revenue-info h3 {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 4px;
+}
+
+.revenue-summary .revenue-card .revenue-info .amount {
+    font-size: 24px;
+    font-weight: 700;
+    color: #17a2b8;
+}
+
+.expense{
+    color: #dc3545 !important;
+}
+
+.revenue{
+    color: #17a2b8 !important;
+}

@@ -61,3 +61,38 @@ export const cropData = [
     profit: 25000,
   },
 ];
+
+export const expenseFilterList = [
+  {
+    name: "All",
+    value: "all",
+  },
+  {
+    name: "Land Preparation",
+    value: "landPreparation",
+  },
+  {
+    name: "Seed and Sowing",
+    value: "seedAndSowing",
+  },
+  {
+    name: "Nutrient and Water",
+    value: "nutrientAndWater",
+  },
+  {
+    name: "Pest and Weed",
+    value: "pestAndWeed",
+  },
+  {
+    name: "Harvesting",
+    value: "harvesting",
+  },
+  {
+    name: "Post-Harvest",
+    value: "postHarvest",
+  },
+  {
+    name: "Other",
+    value: "other",
+  },
+];

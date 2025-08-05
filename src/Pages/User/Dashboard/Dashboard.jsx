@@ -11,7 +11,7 @@ import {
   cropFilterList
 } from "../../../DummyData";
 import CropCard from '../../../Components/CropCard/CropCard';
-import Filter from '../../../Components/CustomFilter/CustomFilter';
+import CustomFilter from '../../../Components/CustomFilter/CustomFilter';
 import CustomBarChart from '../../../Components/Graphs/CustomBarChart/CustomBarChart';
 import CustomPieChart from '../../../Components/Graphs/PieChart/CustomPieChart';
 import OverViewCard from '../../../Components/OverviewCard/OverViewCard';
@@ -54,10 +54,10 @@ const Dashboard = () => {
       <div className="crop-management">
         <div className="section-header">
           <h2>Crop Management</h2>
-          <Filter list={cropFilterList} />
+          <CustomFilter list={cropFilterList} />
         </div>
         <div className="crop-list">
-          {cropData.map((crop) => (<CropCard key={crop.id} crop={crop} />))}
+          {cropData.map((crop) => (<CropCard key={crop.id} crop={crop} showProfit={true} />))}
         </div>
       </div>
     </div>

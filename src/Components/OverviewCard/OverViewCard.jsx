@@ -44,8 +44,6 @@ const OverViewCard = ({ cardType, title = "Add Title", value = 1000 }) => {
         }
     }
 
-    console.log("sachin-ghue");
-
     return (
         <div className="overview-card">
             <h3>{title}</h3>

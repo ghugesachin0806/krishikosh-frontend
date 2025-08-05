@@ -2,7 +2,7 @@ import React from 'react'
 import './CustomFilter.css'
 import { ListFilter } from 'lucide-react'
 
-const Filter = ({ list, name = 'filter', id = 'filter-id' }) => {
+const CustomFilter = ({ list, name = 'filter', id = 'filter-id' }) => {
     return (
         <div className='custom-filter'>
             <ListFilter className='custom-filter-icon'/>
@@ -13,4 +13,4 @@ const Filter = ({ list, name = 'filter', id = 'filter-id' }) => {
     )
 }
 
-export default Filter
+export default CustomFilter

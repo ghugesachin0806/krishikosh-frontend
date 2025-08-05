@@ -1,0 +1,93 @@
+.crop-detail {}
+
+.crop-detail .header-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin-bottom: 30px;
+}
+
+.crop-detail .header-section .header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.crop-detail .header-section .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.crop-detail .crop-detail-section {}
+
+.crop-detail .crop-detail-section .overview-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.crop-detail .crop-detail-section .crop-name-header {
+    color: #495057;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+/*  */
+.crop-detail .crop-activity-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 15px;
+}
+
+.crop-detail .crop-activity-section .content-box {
+    background: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.expense-section .expense-activity-header {
+    /* display: flex;
+    flex-direction: column; */
+}
+
+.expense-section .expense-activity-header .start-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.expense-section .expense-activity-header .start-header h2 {
+    color: #495057;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.revenue-section .revenue-activity-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.crop-detail .crop-activity-section .content-box .total-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.crop-detail .crop-activity-section .content-box hr {
+    border: none;
+    height: 0.3px;
+    background-color: #dee2e6;
+    margin: 20px 0;
+}

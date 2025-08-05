@@ -1,0 +1,49 @@
+.cutom-btn {
+    background-color: #7fb069;
+    border: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.addBtn {
+    gap: 5px;
+    background-color: #4a7c59;
+}
+
+.deleteBtn {
+    gap: 5px;
+    background-color: #dc3545;
+}
+
+.updateBtn {
+    gap: 5px;
+    background-color: #17a2b8;
+}
+
+.manageBtn {
+    gap: 5px;
+    background-color: #7fb069;
+}
+
+.clearBtn {
+    gap: 5px;
+    background-color: #a8b5c0;
+}
+
+.expenseBtn {
+    gap: 5px;
+    background-color: #dc3545;
+}
+
+.revenueBtn {
+    gap: 5px;
+    background-color: #4a7c59;
+}

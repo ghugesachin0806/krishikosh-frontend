@@ -4,6 +4,7 @@ import Sidebar from './Components/Sidebar/Sidebar'
 import Dashboard from './Pages/User/Dashboard/Dashboard'
 import "./App.css"
 import CropManagement from './Pages/User/CropManagement/CropManagement'
+import CropDetail from './Pages/User/CropDetail/CropDetail'
 
 const App = () => {
 
@@ -36,7 +37,8 @@ const App = () => {
       {/* <Sidebar/> */}
       <div className="container">
         {/* <Dashboard data={data} updateData={updateData} selectedYear={selectedYear} /> */}
-        <CropManagement/>
+        {/* <CropManagement/> */}
+        <CropDetail/>
       </div>
     </div>
   )

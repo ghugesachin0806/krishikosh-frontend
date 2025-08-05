@@ -1,10 +1,14 @@
 import React from 'react'
 import "./CropCard.css"
+import { Dock } from 'lucide-react'
+import CustomButton from '../CustomButton/CustomButton'
 
-const CropCard = ({ crop, cropManage}) => {
+const CropCard = ({ crop, cropManage, showProfit }) => {
     return (
         <div className='crop-card'>
-            <h3>{crop.name}</h3>
+            <div className="crop-name">
+                <h3>{crop.name} 🌾</h3>
+            </div>
             <div className="crop-stats">
                 <div className="crop-stat">
                     <div className="crop-stat-label">Area</div>
@@ -23,9 +27,15 @@ const CropCard = ({ crop, cropManage}) => {
                     <div className="crop-stat-value">₹{crop.profit.toLocaleString()}</div>
                 </div>
             </div>
-            <div className="crop-profit positive">
-                +{crop.profit.toLocaleString()}
-            </div>
+
+            {showProfit &&
+                <div className="crop-profit positive">
+                    +{crop.profit.toLocaleString()}
+                </div>}
+
+            {cropManage &&
+                <CustomButton buttonType='manageBtn' className='customBtnStyle' title='Manage Crop'/>
+            }
         </div>
     )
 }

@@ -1,0 +1,16 @@
+.modal-overlay .modal .total-preview {
+    margin-bottom: 16px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 2px solid #17a2b8;
+}
+
+.modal-overlay .modal .total-preview .total-amount {
+
+    font-size: 24px;
+    font-weight: 700;
+    color: #17a2b8;
+    text-align: center;
+    margin-top: 8px;
+}

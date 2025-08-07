@@ -9,6 +9,13 @@ import Login from './Pages/Auth/Login'
 import Signup from './Pages/Auth/Signup'
 import ForgetPassword from './Pages/Auth/ForgetPassword'
 import Setting from './Pages/User/Setting/Setting'
+import AddNewCropModal from './Components/Modals/AddNewCropModal'
+import AddNewFinancialYearModal from './Components/Modals/AddNewFinancialYearModal'
+import AddExpense from './Components/Modals/AddExpense'
+import AddRevenue from './Components/Modals/AddRevenue'
+import UpdateCrop from './Components/Modals/UpdateCrop'
+import DeleteCrop from './Components/Modals/DeleteCrop'
+import ClearCropData from './Components/Modals/ClearCropData'
 
 const App = () => {
 
@@ -46,7 +53,14 @@ const App = () => {
         {/* <Dashboard data={data} updateData={updateData} selectedYear={selectedYear} /> */}
         {/* <CropManagement/> */}
         {/* <CropDetail/> */}
-        <Setting/>
+        {/* <Setting/> */}
+        {/* <AddNewCropModal/> */}
+        {/* <AddNewFinancialYearModal/> */}
+        {/* <AddExpense/> */}
+        {/* <AddRevenue/> */}
+        {/* <UpdateCrop/> */}
+        {/* <DeleteCrop/> */}
+        {/* <ClearCropData/> */}
       </div>
     </div>
   )

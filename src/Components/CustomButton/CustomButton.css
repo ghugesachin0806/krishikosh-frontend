@@ -48,16 +48,24 @@
     background-color: #4a7c59;
 }
 
-.editBtn{
+.editBtn {
     gap: 8px;
 }
 
-.saveBtn{
+.saveBtn {
     gap: 5px;
     background-color: #4a7c59;
 }
 
-.dark-green{
-    background-color: #4a7c59;
+.closeBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    color: #6c757d;
 }
 
+.dark-green {
+    background-color: #4a7c59;
+}

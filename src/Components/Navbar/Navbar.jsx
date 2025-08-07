@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Navbar.css"
-import { Calendar, Menu, User } from 'lucide-react'
+import { Calendar, LogOut, Menu, Settings, User } from 'lucide-react'
 import ProfileIcon from '../ProfileIcon/ProfileIcon'
 
 const Navbar = () => {
@@ -25,10 +25,20 @@ const Navbar = () => {
           </select>
         </div>
         <div className="profile-container">
-          <ProfileIcon className='profile-avtar'/>
+          <ProfileIcon className='profile-avtar' />
           <div className="profile-info">
             <h3>Rohit Sharma</h3>
             <p>Farmer</p>
+          </div>
+          <div className="profile-drop-down">
+            <button className='account-setting profile-btn'>
+              <Settings className='icon' />
+              <span>Account Setting</span>
+            </button>
+            <button className='profile-logout profile-btn'>
+              <LogOut className='icon' />
+              <span> Logout</span>
+            </button>
           </div>
         </div>
       </div>

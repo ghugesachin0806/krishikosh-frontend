@@ -25,27 +25,6 @@
     grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
 }
 
-.setting-sections .form-section .form-group {
-    margin-bottom: 16px;
-}
-
-.setting-sections .form-section .form-group .form-label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 500;
-    color: #495057;
-}
-
-.setting-sections .form-section .form-group .form-input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #495057;
-}
-
 .setting-sections .form-actions {
     margin-top: 24px;
     padding-top: 24px;
@@ -112,31 +91,10 @@
 }
 
 .setting-sections .password-section h4 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     color: #495057;
-    margin: 0 0 16px 0;
-}
-
-.setting-sections .password-section .form-group {
-    margin-bottom: 16px;
-}
-
-.setting-sections .password-section .form-group .form-label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 500;
-    color: #495057
-}
-
-.setting-sections .password-section .form-group .form-input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    color: #495057;
+    margin-bottom: 20px;
 }
 
 .setting-sections .password-section .form-action{

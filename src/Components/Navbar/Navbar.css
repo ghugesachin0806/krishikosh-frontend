@@ -72,9 +72,10 @@
 }
 
 .navbar .nav-right .profile-container {
+    position: relative;
     display: flex;
     align-items: center;
-    color:  whitesmoke;
+    color: whitesmoke;
     gap: 12px;
     background: rgba(255, 255, 255, 0.1);
     padding: 8px 16px;
@@ -85,4 +86,40 @@
     width: 60px;
     height: 60px;
     background: #7fb069;
+}
+
+.navbar .nav-right .profile-container .profile-drop-down {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 20px 20px;
+    gap: 15px;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    min-width: 250px;
+    z-index: 1000;
+    margin-top: 8px;
+}
+
+.navbar .nav-right .profile-container .profile-drop-down .profile-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    color: #495057;
+}
+
+.navbar .nav-right .profile-container .profile-drop-down .profile-logout{
+    color: #dc3545;
 }

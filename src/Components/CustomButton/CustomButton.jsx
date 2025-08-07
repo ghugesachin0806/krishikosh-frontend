@@ -1,8 +1,18 @@
 import React from 'react'
 import './CustomButton.css'
-import { BanknoteArrowDown, BanknoteArrowUp, Dock, Edit, Plus, RefreshCcw, Save, Shredder, Trash2 } from 'lucide-react'
+import { BanknoteArrowDown, BanknoteArrowUp, Dock, Edit, Plus, RefreshCcw, Save, Shredder, Trash2, X } from 'lucide-react'
 
-const CustomButton = ({ buttonType,btnColor, title = "Button", className }) => {
+const CustomButton = ({ buttonType, btnColor, title = "Button", className }) => {
+
+  if (buttonType === 'closeBtn') {
+    return (
+      <>
+        <button className='closeBtn'>
+          <X />
+        </button>
+      </>
+    )
+  }
 
   const renderContent = () => {
     switch (buttonType) {
@@ -49,15 +59,15 @@ const CustomButton = ({ buttonType,btnColor, title = "Button", className }) => {
           </>
         )
       case 'editBtn':
-        return(
+        return (
           <>
-          <Edit/>
+            <Edit />
           </>
         )
       case 'saveBtn':
-        return(
+        return (
           <>
-          <Save/>
+            <Save />
           </>
         )
       default:

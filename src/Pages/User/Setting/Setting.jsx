@@ -24,9 +24,9 @@ const Setting = () => {
           </div>
         </div>
         <div className="setting-content">
-          {/* <ProfileSection/> */}
+          <ProfileSection/>
           {/* <NotificationSection/> */}
-          <SecuritySection/>
+          {/* <SecuritySection/> */}
         </div>
       </div>
     </div>

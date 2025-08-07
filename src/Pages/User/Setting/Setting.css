@@ -1,6 +1,6 @@
 .setting-page .setting-header {
     margin-top: 150px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
 }
 
 .setting-page .setting-container {
@@ -34,7 +34,7 @@
     border-radius: 8px;
     cursor: pointer;
     color: #6c757d;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 500;
     text-align: left;
     width: 100%;

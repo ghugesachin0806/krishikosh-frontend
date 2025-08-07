@@ -48,6 +48,16 @@
     background-color: #4a7c59;
 }
 
+.editBtn{
+    gap: 8px;
+}
+
+.saveBtn{
+    gap: 5px;
+    background-color: #4a7c59;
+}
+
 .dark-green{
     background-color: #4a7c59;
 }
+

@@ -2,7 +2,9 @@ import React from 'react'
 import './Setting.css'
 import PageHeader from '../../../Components/PageHeader/PageHeader'
 import { settingTabs } from '../../../DummyData'
-import ProfileSection from '../../../Components/SettingComponent/ProfileSection'
+import ProfileSection from '../../../Components/SettingComponent/ProfileSection/ProfileSection'
+import NotificationSection from '../../../Components/SettingComponent/NotificationSection/NotificationSection'
+import SecuritySection from '../../../Components/SettingComponent/SecuritySection/SecuritySection'
 
 const Setting = () => {
   return (
@@ -22,7 +24,9 @@ const Setting = () => {
           </div>
         </div>
         <div className="setting-content">
-          <ProfileSection/>
+          {/* <ProfileSection/> */}
+          {/* <NotificationSection/> */}
+          <SecuritySection/>
         </div>
       </div>
     </div>

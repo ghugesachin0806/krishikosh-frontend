@@ -14,6 +14,45 @@ export const settingTabs = [
   { id: "data", label: "Data Management", icon: Database },
 ];
 
+export const notificationSettings = [
+  {
+    id: "emailNotifications",
+    title: "Email Notifications",
+    subtitle: "Receive important updates via email"
+  },
+  {
+    id: "smsNotifications",
+    title: "SMS Notifications",
+    subtitle: "Get urgent alerts via SMS"
+  },
+  {
+    id: "pushNotifications",
+    title: "Push Notifications",
+    subtitle: "Receive in-app notifications"
+  },
+  {
+    id: "cropReminders",
+    title: "Crop Reminders",
+    subtitle: "Get reminders for crop-related tasks"
+  },
+  {
+    id: "weatherAlerts",
+    title: "Weather Alerts",
+    subtitle: "Receive weather-related alerts"
+  },
+  {
+    id: "marketUpdates",
+    title: "Market Updates",
+    subtitle: "Get crop price and market updates"
+  },
+  {
+    id: "expenseReminders",
+    title: "Expense Reminders",
+    subtitle: "Reminders for expense tracking"
+  }
+];
+
+
 export const cropFilterList = [
   {
     name: "All",

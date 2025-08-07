@@ -1,6 +1,6 @@
 import React from 'react'
 import './CustomButton.css'
-import { BanknoteArrowDown, BanknoteArrowUp, Dock, Plus, RefreshCcw, Shredder, Trash2 } from 'lucide-react'
+import { BanknoteArrowDown, BanknoteArrowUp, Dock, Edit, Plus, RefreshCcw, Save, Shredder, Trash2 } from 'lucide-react'
 
 const CustomButton = ({ buttonType,btnColor, title = "Button", className }) => {
 
@@ -46,6 +46,18 @@ const CustomButton = ({ buttonType,btnColor, title = "Button", className }) => {
         return (
           <>
             <BanknoteArrowUp />
+          </>
+        )
+      case 'editBtn':
+        return(
+          <>
+          <Edit/>
+          </>
+        )
+      case 'saveBtn':
+        return(
+          <>
+          <Save/>
           </>
         )
       default:

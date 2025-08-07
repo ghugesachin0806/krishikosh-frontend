@@ -1,3 +1,52 @@
-.revenue-card{
-    
+.revenue-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: #e9ecef;
+    border-radius: 8px;
+}
+
+.revenue-card .revenue-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.revenue-card .revenue-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.revenue-card .revenue-info .revenue-detail {
+    display: flex;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.revenue-card .revenue-info .revenue-quantity {
+    font-size: 16px;
+    color: #495057;
+    font-weight: 600;
+}
+
+.revenue-card .revenue-actions .revenue-total {
+    font-weight: 600;
+    font-size: 19px;
+    color: #17a2b8;
+}
+
+.revenue-card .revenue-actions .edit-revenue-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

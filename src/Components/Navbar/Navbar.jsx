@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Navbar.css"
 import { Calendar, Menu, User } from 'lucide-react'
+import ProfileIcon from '../ProfileIcon/ProfileIcon'
 
 const Navbar = () => {
 
@@ -24,7 +25,7 @@ const Navbar = () => {
           </select>
         </div>
         <div className="profile-container">
-          <div className="profile-avtar">👨‍🌾</div>
+          <ProfileIcon className='profile-avtar'/>
           <div className="profile-info">
             <h3>Rohit Sharma</h3>
             <p>Farmer</p>

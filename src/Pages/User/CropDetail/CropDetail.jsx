@@ -15,6 +15,8 @@ import {
 import OverViewCard from '../../../Components/OverviewCard/OverViewCard'
 import CustomFilter from '../../../Components/CustomFilter/CustomFilter'
 import RevenueSummary from '../../../Components/RevenueSummary/RevenueSummary'
+import RevenueCard from '../../../Components/RevenueCard/RevenueCard'
+import ExpenseCard from '../../../Components/ExpenseCard/ExpenseCard'
 
 const CropDetail = () => {
 
@@ -56,7 +58,10 @@ const CropDetail = () => {
             <RevenueSummary title="Total Expenses" amount={250} type='expense' />
           </div>
           <hr/>
-          <div className="expense-cards"></div>
+          <div className="expense-list">
+            <ExpenseCard/>
+            <ExpenseCard/>
+          </div>
         </div>
         <div className="revenue-section content-box">
           <div className="revenue-activity-header">
@@ -67,7 +72,10 @@ const CropDetail = () => {
             <RevenueSummary title="Total Revenue" amount={450} type='revenue' />
           </div>
           <hr/>
-          <div className="revenue-cards"></div>
+          <div className="revenue-list">
+            <RevenueCard/>
+            <RevenueCard/>
+          </div>
         </div>
       </div>
     </div>

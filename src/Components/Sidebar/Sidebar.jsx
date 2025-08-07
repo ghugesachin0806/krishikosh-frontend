@@ -2,6 +2,7 @@ import React from 'react'
 import "./Sidebar.css"
 import { BarChart3, Calendar, Crop, FileText, HelpCircle, Home, Mail, MapPin, Phone, Settings, X } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
+import ProfileIcon from '../ProfileIcon/ProfileIcon';
 
 const profile = {
   name: 'Rajesh Kumar',
@@ -63,7 +64,7 @@ const Sidebar = () => {
           </button>
         </div>
         <div className="sidebar-profile">
-          <div className="profile-avtar">👨‍🌾</div>
+          <ProfileIcon className='profile-avatar' />
           <div className="profile-info">
             <h3>{profile.name}</h3>
             <p>{profile.role}</p>

@@ -73,6 +73,12 @@
     font-weight: 600;
 }
 
+.revenue-section .revenue-activity-header h2 {
+    color: #495057;
+    font-size: 28px;
+    font-weight: 600;
+}
+
 .revenue-section .revenue-activity-header {
     display: flex;
     align-items: center;
@@ -90,4 +96,16 @@
     height: 0.3px;
     background-color: #dee2e6;
     margin: 20px 0;
+}
+
+.revenue-section .revenue-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.expense-section .expense-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }

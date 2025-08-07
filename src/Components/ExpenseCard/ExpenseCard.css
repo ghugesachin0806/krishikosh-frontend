@@ -1,3 +1,52 @@
-.expense-card{
-    
+.expense-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    background: #e9ecef;
+    border-radius: 8px;
+}
+
+.expense-card .expense-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.expense-card .expense-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.expense-card .expense-info .expense-details {
+    display: flex;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6c757d;
+}
+
+.expense-card .expense-info .expense-description {
+    font-size: 16px;
+    color: #495057;
+    font-weight: 600;
+}
+
+.expense-card .expense-actions .expense-total {
+    font-weight: 600;
+    font-size: 19px;
+    color: #dc3545;
+}
+
+.expense-card .expense-actions .edit-expense-btn{
+        background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+    border-radius: 4px;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

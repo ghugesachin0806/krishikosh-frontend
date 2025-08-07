@@ -6,14 +6,6 @@
     margin-bottom: 30px;
 }
 
-.crop-management .head-section .text-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: baseline;
-    margin-bottom: 12px;
-}
-
 .crop-management .head-section .text-content h2 {
     color: #495057;
     font-size: 28px;
@@ -41,12 +33,6 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
-}
-
-.crop-management .crop-management-cards .section-header h2 {
-    color: #495057;
-    font-size: 24px;
-    font-weight: 600;
 }
 
 .crop-management .crop-management-cards .crop-list {

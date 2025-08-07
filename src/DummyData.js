@@ -1,8 +1,18 @@
+import { Bell, Database, Palette, Shield, User } from "lucide-react";
+
 export const totalExpenses = 90;
 export const totalRevenue = 190;
 export const netProfit = 100;
 
 export const COLORS = ["#2d5a27", "#4a7c59", "#7fb069", "#8b4513", "#d2b48c"];
+
+export const settingTabs = [
+  { id: "profile", label: "Profile", icon: User },
+  { id: "notifications", label: "Notifications", icon: Bell },
+  { id: "preferences", label: "Preferences", icon: Palette },
+  { id: "security", label: "Security", icon: Shield },
+  { id: "data", label: "Data Management", icon: Database },
+];
 
 export const cropFilterList = [
   {

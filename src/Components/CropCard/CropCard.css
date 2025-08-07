@@ -24,7 +24,8 @@
 }
 
 .crop-card .crop-stats .crop-stat .crop-stat-label {
-    font-size: 12px;
+    font-size: 16px;
+    font-weight: 600;
     color: #6c757d;
     margin-bottom: 4px;
 }

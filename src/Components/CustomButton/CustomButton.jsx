@@ -2,7 +2,7 @@ import React from 'react'
 import './CustomButton.css'
 import { BanknoteArrowDown, BanknoteArrowUp, Dock, Plus, RefreshCcw, Shredder, Trash2 } from 'lucide-react'
 
-const CustomButton = ({ buttonType, title = "Button", className }) => {
+const CustomButton = ({ buttonType,btnColor, title = "Button", className }) => {
 
   const renderContent = () => {
     switch (buttonType) {
@@ -57,7 +57,7 @@ const CustomButton = ({ buttonType, title = "Button", className }) => {
   }
 
   return (
-    <button className={`cutom-btn ${buttonType} ${className}`}>
+    <button className={`cutom-btn ${buttonType} ${btnColor} ${className}`}>
       {renderContent()}
       <h3>{title}</h3>
     </button>

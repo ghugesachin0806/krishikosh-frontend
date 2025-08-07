@@ -13,6 +13,7 @@ import CropCard from '../../../Components/CropCard/CropCard';
 import CustomFilter from '../../../Components/CustomFilter/CustomFilter';
 import OverViewCard from '../../../Components/OverviewCard/OverViewCard';
 import CustomButton from '../../../Components/CustomButton/CustomButton';
+import PageHeader from '../../../Components/PageHeader/PageHeader';
 
 
 const CropManagement = () => {
@@ -21,10 +22,7 @@ const CropManagement = () => {
     <div className='crop-management'>
       {/* Header-section */}
       <div className="head-section">
-        <div className="text-content">
-          <h2>Crop Management</h2>
-          <p>Manage and track all your crops for {"2024-25"}</p>
-        </div>
+        <PageHeader title='Crop Management' subTitle='Manage and track all your crops for 2024-25'/>
         <CustomButton buttonType='addBtn' title="Add New Financial Year" />
       </div>
       {/* Cards-section*/}
@@ -37,7 +35,7 @@ const CropManagement = () => {
       {/* crop-management */}
       <div className="crop-management-cards">
         <div className="section-header">
-          <h2>Crops</h2>
+          <PageHeader title='Crops'/>
           <CustomButton buttonType='addBtn' title="Add New Crop" />
         </div>
         <div className="crop-filter-section">

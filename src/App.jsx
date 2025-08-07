@@ -5,6 +5,10 @@ import Dashboard from './Pages/User/Dashboard/Dashboard'
 import "./App.css"
 import CropManagement from './Pages/User/CropManagement/CropManagement'
 import CropDetail from './Pages/User/CropDetail/CropDetail'
+import Login from './Pages/Auth/Login'
+import Signup from './Pages/Auth/Signup'
+import ForgetPassword from './Pages/Auth/ForgetPassword'
+import Setting from './Pages/User/Setting/Setting'
 
 const App = () => {
 
@@ -36,9 +40,13 @@ const App = () => {
       <Navbar />
       {/* <Sidebar/> */}
       <div className="container">
+        {/* <Login/> */}
+        {/* <Signup/> */}
+        {/* <ForgetPassword/> */}
         {/* <Dashboard data={data} updateData={updateData} selectedYear={selectedYear} /> */}
         {/* <CropManagement/> */}
-        <CropDetail/>
+        {/* <CropDetail/> */}
+        <Setting/>
       </div>
     </div>
   )

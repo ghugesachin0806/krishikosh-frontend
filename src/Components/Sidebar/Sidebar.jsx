@@ -18,13 +18,13 @@ const profile = {
 
 const menuItems = [
   {
-    path: '/',
+    path: '/dashboard',
     icon: Home,
     label: 'Dashboard',
     description: 'Overview and analytics'
   },
   {
-    path: '/crops',
+    path: '/crop-management',
     icon: Crop,
     label: 'Crop Management',
     description: 'Manage your crops'
@@ -42,7 +42,7 @@ const menuItems = [
     description: 'Farming schedule'
   },
   {
-    path: '/reports',
+    path: '/report',
     icon: FileText,
     label: 'Reports',
     description: 'Financial reports'
@@ -89,7 +89,7 @@ const Sidebar = () => {
                 <NavLink
                   key={item.path}
                   to={item.path}
-                  className={({ isActive }) => `nav-item ${isActive ? 'active' : ''}`}
+                  className='nav-item'
                 >
                   <item.icon className="nav-icon" />
                   <div className="nav-content">
@@ -101,14 +101,14 @@ const Sidebar = () => {
           </div>
           <div className="nav-section">
             <h4>Account</h4>
-            <NavLink className="nav-item">
+            <NavLink className="nav-item" to='/setting'>
               <Settings className="nav-icon" />
               <div className="nav-content">
                 <span className="nav-label">Settings</span>
                 <span className="nav-description">Account preferences</span>
               </div>
             </NavLink>
-            <NavLink className="nav-item">
+            <NavLink className="nav-item" to='/help-center'>
               <HelpCircle className="nav-icon" />
               <div className="nav-content">
                 <span className="nav-label">Help & Support</span>

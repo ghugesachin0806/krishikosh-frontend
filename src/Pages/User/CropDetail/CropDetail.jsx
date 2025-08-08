@@ -17,14 +17,17 @@ import CustomFilter from '../../../Components/CustomFilter/CustomFilter'
 import RevenueSummary from '../../../Components/RevenueSummary/RevenueSummary'
 import RevenueCard from '../../../Components/RevenueCard/RevenueCard'
 import ExpenseCard from '../../../Components/ExpenseCard/ExpenseCard'
+import { useNavigate } from 'react-router-dom'
 
 const CropDetail = () => {
+
+  const navigate = useNavigate();
 
   return (
     <div className='crop-detail'>
       {/* Crop-Detail Header section */}
       <div className="header-section">
-        <div className="header-left">
+        <div onClick={()=>navigate('/crop-management')} className="header-left">
           <ArrowLeft className='icon' />
           <h2>Back</h2>
         </div>

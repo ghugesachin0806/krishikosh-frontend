@@ -141,7 +141,7 @@
     color: #2d5a27;
 }
 
-.sidebar .sidebar-nav .nav-section .nav-item .active {
+.sidebar .sidebar-nav .nav-section .nav-item.active {
     background: rgba(45, 90, 39, 0.1);
     color: #2d5a27;
     border-left-color: #2d5a27;

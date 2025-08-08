@@ -11,7 +11,7 @@ export const settingTabs = [
   { id: "notifications", label: "Notifications", icon: Bell },
   { id: "preferences", label: "Preferences", icon: Palette },
   { id: "security", label: "Security", icon: Shield },
-  { id: "data", label: "Data Management", icon: Database },
+  { id: "data-management", label: "Data Management", icon: Database },
 ];
 
 export const notificationSettings = [

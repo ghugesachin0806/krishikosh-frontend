@@ -15,7 +15,7 @@ import PreferenceSection from '../Components/SettingComponent/PreferenceSection/
 import SecuritySection from '../Components/SettingComponent/SecuritySection/SecuritySection';
 import DataMgmtSection from '../Components/SettingComponent/DataMgmtSection/DataMgmtSection';
 
-const AppRoutes = ({data,setdata}) => {
+const AppRoutes = () => {
   const router = createBrowserRouter(createRoutesFromElements
     (
       <Route path='/' element={<RouteLayout />}>

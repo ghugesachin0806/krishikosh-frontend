@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Setting.css'
 import PageHeader from '../../../Components/PageHeader/PageHeader'
 import { settingTabs } from '../../../DummyData'
@@ -13,7 +13,12 @@ const Setting = () => {
   const location = useLocation();
 
   const currentPath = location.pathname.split('/').pop();
+
   const [activeTab, setactiveTab] = useState(currentPath);
+
+  useEffect(() => {
+    setactiveTab(currentPath);
+  }, [location.pathname]);
 
   const navigateButtonHandler = (tabId) => {
     setactiveTab(tabId);

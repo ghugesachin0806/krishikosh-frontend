@@ -1,15 +1,38 @@
-import React from 'react'
 import "./Navbar.css"
 import { Calendar, LogOut, Menu, Settings, User } from 'lucide-react'
 import ProfileIcon from '../ProfileIcon/ProfileIcon'
+import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-toastify'
+import { useContext } from "react"
+import { DataContext, SignupContext } from "../../App"
+import { UserContext } from "../../Navigation/ProtectedRoutes"
 
-const Navbar = () => {
+const Navbar = ({ setsidebarOpen }) => {
 
+  const navigate = useNavigate();
+  const { user, setuser } = useContext(UserContext);
+  const { data, setdata } = useContext(DataContext);
+
+  const logoutHandler = () => {
+    setdata({
+      ...data,
+      currentUser: {
+        id: null,
+        status: false
+      }
+    });
+    navigate('/login');
+    toast.success("Logout successful");
+  }
+
+  const handleYearChange = (e) => {
+
+  }
 
   return (
     <div className='navbar'>
       <div className='nav-left'>
-        <button className='nav-btn'>
+        <button className='nav-btn' onClick={() => setsidebarOpen(true)}>
           <Menu size={35} />
         </button>
         <div className='nav-logo'>
@@ -20,22 +43,22 @@ const Navbar = () => {
       <div className="nav-right">
         <div className="year-selection">
           <Calendar className='calender-icon' />
-          <select className="year-select" id="financial_year" name="financial_year">
-            <option value="2024-25">2024-25</option>
+          <select className="year-select" id="financial_year" name="financial_year" value={user?.currentYear ?? '2024-25'} onChange={handleYearChange}>
+            {user?.years?.map(year => (<option key={year.year} value={year.year}>{year.year}</option>)) || (<option value='2024-25'>2024-25</option>)}
           </select>
         </div>
         <div className="profile-container">
           <ProfileIcon className='profile-avtar' />
           <div className="profile-info">
-            <h3>Rohit Sharma</h3>
+            <h3>{user?.name ?? 'User'}</h3>
             <p>Farmer</p>
           </div>
           <div className="profile-drop-down">
-            <button className='account-setting profile-btn'>
+            <button onClick={() => navigate('/setting')} className='account-setting profile-btn'>
               <Settings className='icon' />
               <span>Account Setting</span>
             </button>
-            <button className='profile-logout profile-btn'>
+            <button onClick={logoutHandler} className='profile-logout profile-btn'>
               <LogOut className='icon' />
               <span> Logout</span>
             </button>

@@ -11,26 +11,35 @@ const Signup = () => {
   const { data, setdata } = useContext(DataContext);
 
   const [formData, setformData] = useState({
-    name: "",
-    mobileNumber: "",
-    email: "",
-    password: "",
-    confirmPassword: ""
+    name: null,
+    mobileNumber: null,
+    email: null,
+    password: null,
+    confirmPassword: null,
+    farmSize: null,
+    farmingExperience: null,
+    selectedYear: "2024-25",
+    location: null,
+    years: [{ year: "2024-25" }]
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const users = data?.users || [];
-    console.log(users);
     const exist = users.some(user => user.mobileNumber === formData.mobileNumber);
-    console.log(exist);
 
     if (!exist) {
-      console.log(formData);
+
       setdata({
         ...data,
-        users: [...users, formData]
+        counter: data.counter + 1,
+        users: [...users,
+        {
+          ...formData,
+          id: data.counter + 1
+        }
+        ]
       });
 
       navigate("/login");
@@ -38,7 +47,7 @@ const Signup = () => {
       return;
     }
 
-    toast.error("Signup Error");
+    toast.error("Mobile Number exist");
   }
 
   const handleChange = (e) => {

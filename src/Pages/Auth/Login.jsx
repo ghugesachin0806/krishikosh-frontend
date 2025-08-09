@@ -1,35 +1,20 @@
 import React, { useContext, useState } from 'react'
 import './Auth.css'
 import CustomButton from '../../Components/CustomButton/CustomButton'
-import { DataContext, LoginStatusContext } from '../../App';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import { DataContext, SignupContext } from '../../App';
 
 const Login = () => {
 
     const navigate = useNavigate();
     const { data, setdata } = useContext(DataContext);
-    const { isLoggedin, setisLoggedin } = useContext(LoginStatusContext);
+    const { signupState, setsignupState } = useContext(SignupContext)
 
     const [formData, setformData] = useState({
         mobileNumber: "",
         password: ""
     })
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-
-        const users = data?.users || [];
-        const exist = users.some(user => user.mobileNumber === formData.mobileNumber && user.password === formData.password);
-
-        if (exist) {
-            setisLoggedin(true);
-            navigate("/dashboard");
-            toast.success("Login successful");
-            return;
-        }
-        toast.error("Login Error");
-    }
 
     const handleChange = (e) => {
         setformData({
@@ -37,6 +22,34 @@ const Login = () => {
             [e.target.name]: e.target.value
         });
     }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const users = data?.users || [];
+        const existinUser = users.find(user => user.mobileNumber === formData.mobileNumber 
+            && user.password === formData.password) || null;
+
+        if (existinUser) {
+
+            const newSignupState = {
+                id: existinUser.id,
+                status:true
+            };
+
+            setsignupState(newSignupState);
+
+            setdata({
+                ...data,
+                currentUser: newSignupState
+            });
+            navigate("/dashboard");
+            toast.success("Login successful");
+            return;
+        }
+
+        toast.error("Login Error");
+    }
+
 
     return (
         <div className='auth-container'>
@@ -54,7 +67,7 @@ const Login = () => {
                         <input type="password" className='form-input' id='password' name='password' value={formData.password} onChange={handleChange} placeholder='Password' required />
                     </div>
                     <div className="form-actions">
-                        <CustomButton title='Login' btnColor='dark-green' className='auth-btn custom-login-btn' />
+                        <CustomButton type='submit' title='Login' btnColor='dark-green' className='auth-btn custom-login-btn' />
                     </div>
                 </form>
                 <div className="auth-links">

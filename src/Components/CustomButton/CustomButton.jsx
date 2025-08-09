@@ -2,12 +2,12 @@ import React from 'react'
 import './CustomButton.css'
 import { BanknoteArrowDown, BanknoteArrowUp, Dock, Edit, Plus, RefreshCcw, Save, Shredder, Trash2, X } from 'lucide-react'
 
-const CustomButton = ({ buttonType, btnColor, title = "Button", className,type='button' }) => {
+const CustomButton = ({ buttonType, btnColor, title = "Button", className,type='button', handler}) => {
 
   if (buttonType === 'closeBtn') {
     return (
       <>
-        <button className='closeBtn'>
+        <button onClick={handler}  type={type} className='closeBtn'>
           <X />
         </button>
       </>
@@ -79,7 +79,7 @@ const CustomButton = ({ buttonType, btnColor, title = "Button", className,type='
   }
 
   return (
-    <button type={type} className={`cutom-btn ${buttonType} ${btnColor} ${className}`}>
+    <button onClick={handler}  type={type} className={`cutom-btn ${buttonType} ${btnColor} ${className}`}>
       {renderContent()}
       <h3>{title}</h3>
     </button>

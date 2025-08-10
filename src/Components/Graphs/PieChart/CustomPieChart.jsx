@@ -1,5 +1,5 @@
 import React from 'react'
-import { COLORS } from '../../../DummyData'
+import { COLORS } from '../../../Utils/DummyData'
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts'
 
 const CustomPieChart = ({ cropData, dataKeyName, labelName = 'name', outerRadius, width = "100%", height = 300 }) => {

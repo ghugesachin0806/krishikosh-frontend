@@ -26,7 +26,11 @@ const Navbar = ({ setsidebarOpen }) => {
   }
 
   const handleYearChange = (e) => {
-
+    const select = e.target.value;
+    setuser({
+      ...user,
+      selectedYear: select
+    });
   }
 
   return (
@@ -43,14 +47,14 @@ const Navbar = ({ setsidebarOpen }) => {
       <div className="nav-right">
         <div className="year-selection">
           <Calendar className='calender-icon' />
-          <select className="year-select" id="financial_year" name="financial_year" value={user?.currentYear ?? '2024-25'} onChange={handleYearChange}>
+          <select className="year-select" id="financial_year" name="financial_year" value={user?.selectedYear ?? '2024-25'} onChange={handleYearChange}>
             {user?.years?.map(year => (<option key={year.year} value={year.year}>{year.year}</option>)) || (<option value='2024-25'>2024-25</option>)}
           </select>
         </div>
         <div className="profile-container">
           <ProfileIcon className='profile-avtar' />
           <div className="profile-info">
-            <h3>{user?.name ?? 'User'}</h3>
+            <h3>{user?.name || 'User'}</h3>
             <p>Farmer</p>
           </div>
           <div className="profile-drop-down">

@@ -66,13 +66,13 @@ const Sidebar = ({ sidebarOpen, setsidebarOpen }) => {
               <p>Farmer</p>
               <div className="profile-details">
                 <div className="detail-item">
-                  <MapPin className='detail-icon' /> <span>{user?.location ?? 'India'}</span>
+                  <MapPin className='detail-icon' /> <span>{user?.location || 'India'}</span>
                 </div>
                 <div className="detail-item">
-                  <Phone className='detail-icon' /> <span>{user?.mobileNumber ?? '--'}</span>
+                  <Phone className='detail-icon' /> <span>{user?.mobileNumber || '--'}</span>
                 </div>
                 <div className="detail-item">
-                  <Mail className='detail-icon' /><span>{user?.email ?? '--'}</span>
+                  <Mail className='detail-icon' /><span>{user?.email || '--'}</span>
                 </div>
               </div>
             </div>
@@ -105,7 +105,7 @@ const Sidebar = ({ sidebarOpen, setsidebarOpen }) => {
                   <span className="nav-description">Account preferences</span>
                 </div>
               </NavLink>
-              <NavLink onClick={sidebarHandler} className="nav-item" to='/help-center'>
+              <NavLink onClick={sidebarHandler} className="nav-item" to='/login'>
                 <HelpCircle className="nav-icon" />
                 <div className="nav-content">
                   <span className="nav-label">Help & Support</span>
@@ -120,15 +120,15 @@ const Sidebar = ({ sidebarOpen, setsidebarOpen }) => {
               <div className="farm-details">
                 <div className="farm-detail">
                   <span className="detail-label">Total Land:</span>
-                  <span className="detail-value">{user?.farmSize ?? '--'}</span>
+                  <span className="detail-value">{user?.farmSize || '--'}</span>
                 </div>
                 <div className="farm-detail">
                   <span className="detail-label">Active Crops:</span>
-                  <span className="detail-value">{user?.activeCrop ?? '--'}</span>
+                  <span className="detail-value">{user?.activeCrop || '--'}</span>
                 </div>
                 <div className="farm-detail">
                   <span className="detail-label">This Year:</span>
-                  <span className="detail-value">{user?.currentYear ?? '--'}</span>
+                  <span className="detail-value">{user?.selectedYear || '--'}</span>
                 </div>
               </div>
             </div>

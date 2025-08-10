@@ -21,15 +21,17 @@ const AppRoutes = () => {
 
   const router = createBrowserRouter(createRoutesFromElements
     (
-      <Route path='/' element={<RouteLayout/>}>
+      <Route path='/' element={<RouteLayout />}>
         <Route index element={<Navigate to="/login" replace />} />
         <Route path='login' element={<Login />} />
         <Route path='signup' element={<Signup />} />
         <Route path='forget-password' element={<ForgetPassword />} />
-        <Route element={<ProtectedRoutes/>}>
+        <Route element={<ProtectedRoutes />}>
           <Route path='dashboard' element={<Dashboard />} />
-          <Route path='crop-management' element={<CropManagement />} />
-          <Route path='crop-detail' element={<CropDetail />} />
+          <Route path='crop-management' >
+            <Route index element={<CropManagement />} />
+            <Route path=':cropId' element={<CropDetail />} />
+          </Route>
           <Route path='setting' element={<Setting />} >
             <Route index element={<Navigate to="profile" replace />} />
             <Route path='profile' element={<ProfileSection />} />

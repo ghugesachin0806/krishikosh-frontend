@@ -11,15 +11,15 @@ const Signup = () => {
   const { data, setdata } = useContext(DataContext);
 
   const [formData, setformData] = useState({
-    name: null,
-    mobileNumber: null,
-    email: null,
-    password: null,
-    confirmPassword: null,
-    farmSize: null,
-    farmingExperience: null,
+    name: "",
+    mobileNumber: "",
+    email: "",
+    password: " ",
+    confirmPassword: "",
+    farmSize: "",
+    farmingExperience: "",
     selectedYear: "2024-25",
-    location: null,
+    location: "",
     years: [{ year: "2024-25" }]
   });
 

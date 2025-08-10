@@ -9,7 +9,7 @@ import {
   COLORS,
   cropData,
   cropFilterList
-} from "../../../DummyData";
+} from "../../../Utils/DummyData";
 import CropCard from '../../../Components/CropCard/CropCard';
 import CustomFilter from '../../../Components/CustomFilter/CustomFilter';
 import CustomBarChart from '../../../Components/Graphs/CustomBarChart/CustomBarChart';

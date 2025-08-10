@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './CropDetail.css'
 import { ArrowLeft } from 'lucide-react'
 import CustomButton from '../../../Components/CustomButton/CustomButton'
@@ -11,30 +11,42 @@ import {
   cropData,
   cropFilterList,
   expenseFilterList
-} from "../../../DummyData";
+} from "../../../Utils/DummyData";
 import OverViewCard from '../../../Components/OverviewCard/OverViewCard'
 import CustomFilter from '../../../Components/CustomFilter/CustomFilter'
 import RevenueSummary from '../../../Components/RevenueSummary/RevenueSummary'
 import RevenueCard from '../../../Components/RevenueCard/RevenueCard'
 import ExpenseCard from '../../../Components/ExpenseCard/ExpenseCard'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import UpdateCrop from '../../../Components/Modals/UpdateCrop'
+import ClearCropData from '../../../Components/Modals/ClearCropData'
+import DeleteCrop from '../../../Components/Modals/DeleteCrop'
+import AddExpense from '../../../Components/Modals/AddExpense'
+import AddRevenue from '../../../Components/Modals/AddRevenue'
 
 const CropDetail = () => {
 
   const navigate = useNavigate();
+  const { cropId } = useParams();
+
+  const [addNewExpenseOpen, setaddNewExpenseOpen] = useState(false);
+  const [addNewRevenueOpen, setaddNewRevenueOpen] = useState(false);
+  const [updateCropOpen, setupdateCropOpen] = useState(false);
+  const [clearCropOpen, setclearCropOpen] = useState(false);
+  const [deleteCropOpen, setdeleteCropOpen] = useState(false);
 
   return (
     <div className='crop-detail'>
       {/* Crop-Detail Header section */}
       <div className="header-section">
-        <div onClick={()=>navigate('/crop-management')} className="header-left">
+        <div onClick={() => navigate('/crop-management')} className="header-left">
           <ArrowLeft className='icon' />
           <h2>Back</h2>
         </div>
         <div className="header-right">
-          <CustomButton buttonType='updateBtn' title='Update Crop' />
-          <CustomButton buttonType='clearBtn' title='Clear Data' />
-          <CustomButton buttonType='deleteBtn' title='Delete Crop' />
+          <CustomButton buttonType='updateBtn' title='Update Crop' handler={() => setupdateCropOpen(true)} />
+          <CustomButton buttonType='clearBtn' title='Clear Data' handler={() => setclearCropOpen(true)} />
+          <CustomButton buttonType='deleteBtn' title='Delete Crop' handler={() => setdeleteCropOpen(true)} />
         </div>
       </div>
       {/* Crop-Detail Section */}
@@ -53,34 +65,39 @@ const CropDetail = () => {
           <div className="expense-activity-header">
             <div className="start-header">
               <h2>Farming Activities</h2>
-              <CustomButton buttonType='expenseBtn' title='Add Expense' />
+              <CustomButton buttonType='expenseBtn' title='Add Expense'  handler={()=>setaddNewExpenseOpen(true)}  />
             </div>
-              <CustomFilter list={expenseFilterList} name='farm-activity-filter' id='farm-activity-filter-id' />
+            <CustomFilter list={expenseFilterList} name='farm-activity-filter' id='farm-activity-filter-id' />
           </div>
           <div className="total-section">
             <RevenueSummary title="Total Expenses" amount={250} type='expense' />
           </div>
-          <hr/>
+          <hr />
           <div className="expense-list">
-            <ExpenseCard/>
-            <ExpenseCard/>
+            <ExpenseCard />
+            <ExpenseCard />
           </div>
         </div>
         <div className="revenue-section content-box">
           <div className="revenue-activity-header">
             <h2>Revenue Management</h2>
-            <CustomButton buttonType='revenueBtn' title='Add Revenue'/>
+            <CustomButton buttonType='revenueBtn' title='Add Revenue' handler={()=>setaddNewRevenueOpen(true)} />
           </div>
           <div className="total-section">
             <RevenueSummary title="Total Revenue" amount={450} type='revenue' />
           </div>
-          <hr/>
+          <hr />
           <div className="revenue-list">
-            <RevenueCard/>
-            <RevenueCard/>
+            <RevenueCard />
+            <RevenueCard />
           </div>
         </div>
       </div>
+      {updateCropOpen && <UpdateCrop setupdateCropOpen={setupdateCropOpen} />}
+      {clearCropOpen && <ClearCropData setclearCropOpen={setclearCropOpen} />}
+      {deleteCropOpen && <DeleteCrop setdeleteCropOpen={setdeleteCropOpen} />}
+      {addNewExpenseOpen && <AddExpense setaddNewExpenseOpen={setaddNewExpenseOpen} />}
+      {addNewRevenueOpen && <AddRevenue setaddNewRevenueOpen={setaddNewRevenueOpen} />}
     </div>
   )
 }

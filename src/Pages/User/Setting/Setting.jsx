@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Setting.css'
 import PageHeader from '../../../Components/PageHeader/PageHeader'
-import { settingTabs } from '../../../DummyData'
+import { settingTabs } from '../../../Utils/DummyData'
 import ProfileSection from '../../../Components/SettingComponent/ProfileSection/ProfileSection'
 import NotificationSection from '../../../Components/SettingComponent/NotificationSection/NotificationSection'
 import SecuritySection from '../../../Components/SettingComponent/SecuritySection/SecuritySection'

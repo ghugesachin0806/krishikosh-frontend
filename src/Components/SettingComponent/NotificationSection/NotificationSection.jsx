@@ -3,7 +3,7 @@ import '../SettingComponent.css'
 import PageHeader from '../../PageHeader/PageHeader'
 import NotificationItem from './NotificationItem'
 
-import { notificationSettings } from '../../../DummyData'
+import { notificationSettings } from '../../../Utils/DummyData'
 
 const NotificationSection = () => {
     return (
